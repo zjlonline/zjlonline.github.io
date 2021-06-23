@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+body{
+	margin: 0 auto;
+	padding: 0;
+	background-image: url(sucai/u=1754963388,3192140098&fm=26&gp=0.jpg);
+	height: 100%;
+	width: 100%;
+	background-repeat:no-repeat ;
+	background-size: cover;
+}
+div{
+	width: 300px;
+	height: 200px;
+	border: #00FFFF 1px solid;
+	border-radius:50px ;
+	text-align: center;
+	padding-top: 100px;
+	 position: absolute;
+	 top: 150px;
+	left: 450px;
+	line-height: 30px;
+}
+#num{
+	background: #A6E1EC ;
+}
+#num:hover{
+	background: white;
+	cursor:pointer;
+}
+a{
+				color: red;
+				font-style: initial;
+			}
+			a hover{
+				color: royalblue;
+			}
+/* audio{
+	display: none;
+} */
+</style>
+	<body>
+		<script type="text/javascript">
+			function denglu(){
+				var a=document.getElementById("num").value;
+				var b=document.getElementById("pass").value;
+				if(a==""||b==""){
+					alert("账号或者密码为空");
+				}
+				else if(b.length<6||b.length>9){
+					alert("密码不规范");
+				}
+				else{
+					alert("登录成功");
+					window.open("index.html");
+					}
+				
+			}
+		</script>
+		
+		<div id="zhuce" style="text-align:center;">
+		<span style="color: red;">账号：</span>
+		<input type="text" name="num" id="num" value="" required="" placeholder="输入手机号码或者邮箱"/><br />
+		<span style="color: red;">密码：</span>
+		<input type="password" name="pass" id="pass" value="" required="" placeholder="请输入大于6位数字,小于9位"/><br>
+		<input type="button" name="" id="" value="登录" onclick="denglu()"/>
+		<input type="submit" name="" id=""  value="注册" onclick="location.href='zhuce.html'">
+		<p><a href="index.html">点击返回主页</a></p>
+		</div>
+		<!-- <audio controls="controls" >
+			<source src="BRIGHT%20-%201年2ヶ月20日%20(一年二个月又二十天).mp3" type="audio/mp3" autostart="true" autoplay="true" hidden="true">
+		</audio>
+		<embed src="BRIGHT%20-%201年2ヶ月20日%20(一年二个月又二十天).mp3" autostart="true" loop="true" hidden="true"></embed> -->
+		<audio src="BRIGHT%20-%201年2ヶ月20日%20(一年二个月又二十天).mp3" autoplay="true"  autostart="true" type="audio/mp3">
+			当前浏览器不支持audio
+		</audio>
+		
+	</body>
+</html>

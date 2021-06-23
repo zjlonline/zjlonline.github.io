@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/bbs.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="css/daohanglunbo.css"/>
+		<style type="text/css">
+			header{
+				margin: auto;
+				margin-top: 50px;
+			}
+		</style>
+		<script>
+		    //在页面的结尾，引入jQuery的库文件，代码如下：
+		    $(document).ready(function () {
+		    //在js文件夹下新建一个bbs.js文件，用来编写jQuery代码，实现以上的功能
+		    //bbs.js文件如下：
+		    //给“我要提问”绑定点击事件
+		    $(".bbs header span").click(function(){
+		        //.post所在的<div>，即提问表单显示
+		        $(".bbs .post").show();
+		    });
+		    //用数组保存图像信息
+		    var tou=new Array("0.jpg","1.jpg","2.jpg");
+		    //给“发布”按钮绑定单击事件
+		    $(".post .btn").bind("click",function(){
+		        //创建用来显示帖子的<li>列表项
+		        //产生随机数，取整，然后作为数组下标，随机获取头像
+		        var iNum=Math.floor(Math.random()*3);
+		        //随机获取头像，然后在页面上创建头像节点<div>，用来显示图像
+		        var $touImg=$("<div><img src=sucai/"+tou[iNum]+"></div>");
+		        //先获取输入的标题，然后创建一个变量，用来保存标题节点
+		        var $title=$("<h1>"+$(".title").val()+"</h1>");
+		        //创建一个新的p节点元素
+		        var newP=$("<p></p>");
+		        //获取当前日期对象
+		        var date=new Date();
+		
+		        //获取当前发帖时间，并保存在变量里
+		        var currentDate=date.toUTCString();
+		        //先获取输入的标题，再在p节点中插入版块
+		        $(newP).append("<span>版块："+$("select").val()+"</span>");
+		        //在p节点中插入发布时间
+		        $(newP). append(currentDate);
+		        //创建一个新的li节点元素（列表项）
+		        var $newLi=$("<li></li>");
+		        //在列表项中插入头像
+		        $($newLi).append($touImg);
+		        //在列表项中插入标题
+		        $($newLi).append($title);
+		        //在列表项中插入版块、时间内容
+		        $($newLi).append(newP)
+		        //在页面的ul标签内插入列表项
+		        $(".bbs section ul").prepend($newLi);
+		        //输入表单的标题、板块清空
+		        $(".post .content").val("");
+		        $(".bbs .post").hide();
+		        //输入表单隐藏
+		        $(".post").hide();
+		    });
+		    });
+		
+		</script>
+	</head>
+	<body>
+		<div class="top">
+			<div class="topnav">
+			<ul>
+			<li><a href="zhuce.html">注册</a></li>
+			<li><a href="denglu.html">登录</a></li>
+			</ul>
+			</div>
+		</div>
+		<div class="first"><a href="index.html"><img src="sucai/logo.png" alt=""></a><span class="two">JLonline,一家能让你获得知识的网站</span></div>
+		<script type="text/javascript">
+			        function displaySubMenu(li) {
+			            var a=li.getElementsByTagName("ul")[0];
+			           a.style.display="inline-block";
+			        }
+			        function hideSubMenu(li) {
+			            var b=li.getElementsByTagName("ul")[0];
+			           b.style.display="none";
+			        }
+		</script>
+		<div class="daohang">
+		<div id="nav">
+		<ul>
+		  <li><a href="index.html">首页</a></li>
+		  <li onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)">
+		<a href="#">龙应台</a>
+		     <ul>
+		         <li><a href="long.html">个人简介</a></li>
+		         <li><a href="achieve.html">格言</a></li>
+		     </ul>  
+		  </li>
+		
+		  <li onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)"><a href="#">东野圭吾</a>
+		      <ul>
+		         <li><a href="dong.html">个人简介</a></li>
+		         <li><a href="zuoping.html">作品</a></li>
+		     </ul>  
+		  
+		  </li>
+		  <li onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)"><a href="#">娱乐</a>
+		  <ul>
+		         <li><a href="mp3.html">MP3</a></li>
+		     </ul>  
+		  </li>
+		
+		  <li onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)"><a href="#">动画</a>
+		  <ul>
+		         <li><a href="snow.html">雪花</a></li>
+		     </ul>  
+		  </li>
+		  <li onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)"><a href="#">关于我们</a>
+		  <ul>
+		    <li><a href="lianxi.html">联系我们</a></li>
+		         <li><a href="liuyanban.html">意见反馈</a></li>
+		
+		     </ul>  
+		  </li>
+		</ul>
+		</div>
+		</div>
+		<div class="bbs">
+		    <header><span>留言</span></header>
+		    <section>
+		        <ul></ul>
+		    </section>
+		    <div class="post">
+		        <input class="title" placeholder="请输入标题（1-50个字符）">
+		        所属问题：<select><option>请选择问题</option><option>太优秀了</option><option>太好了</option><option>太炫了</option><option>太酷了</option></select>
+		        <textarea class="content"></textarea>
+		        <input class="btn" value="发布" onclick="liu()">
+		    </div>
+		</div>
+		<script type="text/javascript">
+			function liu(){
+				alert("感谢你提出建议");
+			}
+		</script>
+	</body>
+</html>

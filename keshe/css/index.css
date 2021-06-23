@@ -1,0 +1,206 @@
+*{
+			    margin: 0;
+			    padding: 0;
+			}
+			body{
+			    background:#D0CFCF;
+			}
+			.top{
+			    height: 31px;
+			    border: 1px solid #ccc;
+			    background: #f4f4f4;
+			    min-width: 1280px;
+			}
+			.top .topnav{
+			    width: 990px;
+			    min-width: 990px;
+			    margin: 0 auto;
+			}
+			.top ul{
+			    float: right;
+			}
+			.top ul li{
+			    list-style: none;
+			    float:left;
+			    padding-left: 20px;
+			    line-height: 31px;
+					text-align: center;
+				margin: 0 10px;
+			}
+			
+			.top ul li a{
+			    text-decoration: none;
+			    color: #7f7d7c;
+			}
+			.top ul li:hover a{
+				height: 30px;
+				width: 30px;
+				border:1px  #F4BB02;
+				background: #BDF2F3;
+			}
+			.first{
+				height: 113px;
+				min-width: 1280px;
+				background-color: #00FFFF;
+				margin: 1px solid;
+				text-align: center;
+				line-height: 100px;
+			}
+			.first img{
+				float: left;
+			}
+			/* .first span{
+				line-height: 5px;
+			} */
+			.two{
+				font-size:50px;
+				color: red;
+				font-style: ;
+			}
+			#gun ul {
+				list-style: none;           /*  去掉ul标签默认的点样式  */
+			}
+			#gun a img {
+				border: none;        /*  超链接下，图片的边框  */
+			}
+			#gun a {
+				color: #333;
+				text-decoration: none;     /* 超链接样式 */
+			}
+			#gun a:hover {
+				color: #ff0000;
+			}
+			#news {
+				width: 1280px;
+				border: 5px solid #ababab;
+				-moz-border-radius: 15px;      /* Gecko browsers */
+				-webkit-border-radius: 15px;   /* Webkit browsers */
+				border-radius: 15px;
+				box-shadow: 2px 2px 10px #ababab;
+				margin: 50px auto 0;
+				text-align: left;               /* 让新闻内容靠左 */
+			}
+			/*  头部样式 */	
+			#newsTitle {
+				height: 62px;
+				overflow: hidden;  /* 这个一定要加上，内容超出的部分要隐藏，免得撑高头部 */
+				font-size: 26px;
+				line-height: 62px;
+				padding-left: 30px;
+				background-image: -moz-linear-gradient(top, #f05e6f, #c9394a); /* Firefox */
+				background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f05e6f), color-stop(1, #c9394a)); /* Saf4+, Chrome */
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8fa1ff', endColorstr='#f05e6f', GradientType='0'); /* IE*/
+				border: 1px solid ##f05e6f;
+				-moz-border-radius: 8px 8px 0 0;      /* Gecko browsers */
+				-webkit-border-radius: 8px 8px 0 0;   /* Webkit browsers */
+				border-radius: 8px 8px 0 0;
+				color: #fff;
+				position: relative;
+			}
+			#newsTitle a {
+				position: absolute;
+				right: 10px;
+				bottom: 10px;
+				display: inline;
+				color: #fff;
+				font-size: 12px;
+				line-height: 24px;
+			}
+			/*  底部样式 */
+			#newsBot {
+				width: 1280px;
+				height: 10px;
+				overflow: hidden;     /* 这个一定要加上，内容超出的部分要隐藏，免得撑高底部结构 */
+			}
+			/*  中间样式 */
+			#newsBox {
+				height: 144px;
+				width: 858px;
+				margin-left: 25px;
+				margin-top: 10px;
+				overflow: hidden;    /*  这个一定要加，超出的内容部分要隐藏，免得撑高中间部分 */
+			}
+			#news ul li {
+				height: 24px;
+			}
+			#news ul li a {
+				width: 720px;
+				float: left;
+				display: block;
+				overflow: hidden;
+				text-indent: 15px;
+				height: 24px;
+			}
+			#news ul li span {
+				float: right;
+				color: #999;
+			}	
+			div.updata{
+				float: left;
+				width: 206px;
+				height: 450px;
+				background-color: #211e21;
+				overflow: hidden;
+				position: absolute;
+				left: 100px;
+				margin-top: 80px;
+				
+			}
+			.UpdataTop1{
+				cursor: default;
+				float: left;
+				width: 103px;
+				height: 36px;
+				text-align: center;
+				line-height: 31px;
+				background-color: #211e21;
+				/*border: 1px solid #FFFFFF;*/
+			}
+			.UpdataTop1 span{
+				height: 36px;
+				color: #FFFFFF;
+				font-family: "微软雅黑";
+				font-size: 16px;
+			}
+			.UpdataTop2{
+				cursor: default;
+				float: left;
+				width: 103px;
+				height: 36px;
+				text-align: center;
+				line-height: 31px;
+				background-color: #322d33;
+				/*border: 1px solid #FFFFFF;*/	
+			}
+			#ggTop{
+				text-align: center;
+				color: #FFFFFF;
+			}
+			#ggContent{	
+				text-indent: 28px;
+				color: #FFFFFF;
+				font-size: 14px;
+				position: absolute;
+				left: 5px;
+				width: 197px;
+			}
+			.shujia{
+				float: right;
+				display:inline;
+				width: 200px;
+				height: 400px;
+				background: #6F6F6F;
+				position: absolute;
+				right: 100px;
+			}
+			.shutop{
+				color: #0099FF;-
+			}
+			footer{
+				width: 100%;
+				height: 150px;
+				background: #000000;
+				color: whitesmoke;
+				text-align: center;
+				line-height: 50px;
+			}
